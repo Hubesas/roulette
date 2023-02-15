@@ -46,6 +46,7 @@ function appendBox() {
     });
 }
 playButton.addEventListener(`click`, function () {
+    console.log(choosenColor);
     betmount = Number(betAmount.value);
     winningNumber = Math.floor(Math.random() * 32);
     winningColorIndex = Math.floor(Math.random() * winningColorArr.length);
@@ -61,7 +62,7 @@ playButton.addEventListener(`click`, function () {
         gameMoney.innerText = `Money: ${money}`;
         rolledNumber.innerText = `Rolled number: ${winningNumber}`;
     }
-    if (choosenColor !== ``) {
+    if (choosenColor === `red` || choosenColor === `black`) {
         if (choosenColor === winningColorArr[winningColorIndex]) {
             money = money + betmount * 2;
             gameMoney.innerText = `Money: ${money}`;
