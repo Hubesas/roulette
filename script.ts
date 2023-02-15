@@ -60,7 +60,7 @@ playButton.addEventListener(`click`, function () {
     winningColorIndex = Math.floor(Math.random()*winningColorArr.length)
 
 
-    if (money <= 0 || betmount ===0 || choosenColor === `` || choosenNumber === 0) return
+    if (money <= 0 || betmount ===0 || choosenNumber === 0) return
 
    if (choosenNumber===winningNumber) {
        money = money + betmount*32
@@ -74,16 +74,19 @@ playButton.addEventListener(`click`, function () {
         gameMoney.innerText = `Money: ${money}`
         rolledNumber.innerText = `Rolled number: ${winningNumber}`
     }
-
-    if (choosenColor === winningColorArr[winningColorIndex]) {
-        money = money + betmount*2
-        gameMoney.innerText = `Money: ${money}`
-        rolledColor.innerText = `Rolled color: ${winningColorArr[winningColorIndex]}`
+    if (choosenColor !== ``) {
+        if (choosenColor === winningColorArr[winningColorIndex]) {
+            money = money + betmount*2
+            gameMoney.innerText = `Money: ${money}`
+            rolledColor.innerText = `Rolled color: ${winningColorArr[winningColorIndex]}`
+        }
+        else {
+            gameMoney.innerText = `Money: ${money}`
+            money = money - betmount
+            rolledColor.innerText = `Rolled color: ${winningColorArr[winningColorIndex]}`}
     }
-    else {
-        gameMoney.innerText = `Money: ${money}`
-        money = money - betmount
-        rolledColor.innerText = `Rolled color: ${winningColorArr[winningColorIndex]}`}
+
+
 
     appendBox()
     black.style.border = `none`
