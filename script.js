@@ -56,7 +56,7 @@ playButton.addEventListener(`click`, function () {
         gameMoney.innerText = `Money: ${money}`;
         rolledNumber.innerText = `Rolled number: ${winningNumber}`;
     }
-    {
+    else {
         money = money - betmount;
         gameMoney.innerText = `Money: ${money}`;
         rolledNumber.innerText = `Rolled number: ${winningNumber}`;
