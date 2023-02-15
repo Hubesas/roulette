@@ -60,7 +60,7 @@ playButton.addEventListener(`click`, function () {
     winningColorIndex = Math.floor(Math.random()*winningColorArr.length)
 
 
-    if (money <= 0 || betmount ===0) return
+    if (money <= 0 || betmount ===0 || choosenColor === `` || choosenNumber === 0) return
 
    if (choosenNumber===winningNumber) {
        money = money + betmount*32
