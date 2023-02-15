@@ -1,0 +1,23 @@
+.blackbox {
+    height: 50px;
+    width: 50px;
+    /*border: solid;*/
+    background-color: black;
+    color:white;
+}
+.redBox {
+    height: 50px;
+    width: 50px;
+    /*border: solid;*/
+    background-color: red;
+    color:white;
+}
+
+.money {
+    font-size: large;
+    font-weight: bold;
+}
+button {
+    width: 100px;
+}
+
